@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meine Webseite</title>
+    <style>
+        /* CSS für die allgemeine Seite */
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url('hintergrundbild.jpg'); /* Hintergrundbild-Link hier einfügen */
+            background-size: cover;
+            font-family: Arial, sans-serif;
+        }
+
+        /* CSS für die Container */
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 100vh;
+            padding: 20px;
+        }
+
+        /* CSS für die Spalten */
+        .spalte {
+            flex: 1;
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.8); /* Hintergrundfarbe für die Spalten */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+            transition: transform 1s ease; /* Animationseffekt: Verschiebung nach oben */
+        }
+
+        /* CSS für den Animationseffekt beim Laden der Seite */
+        .spalte.animate {
+            transform: translateY(-50px); /* Verschiebung nach oben um 50px */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="spalte animate">
+            <h1>Spalte 1</h1>
+            <p>Inhalt der ersten Spalte.</p>
+        </div>
+        <div class="spalte animate">
+            <h1>Spalte 2</h1>
+            <p>Inhalt der zweiten Spalte.</p>
+        </div>
+        <div class="spalte animate">
+            <h1>Spalte 3</h1>
+            <p>Inhalt der dritten Spalte.</p>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript für den Animationseffekt beim Laden der Seite
+        const spalten = document.querySelectorAll('.spalte');
+
+        window.addEventListener('load', () => {
+            spalten.forEach((spalte, index) => {
+                setTimeout(() => {
+                    spalte.classList.remove('animate');
+                }, index * 500); // Verzögerung für jede Spalte
+            });
+        });
+    </script>
+</body>
+</html>
