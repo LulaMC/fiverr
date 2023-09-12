@@ -7,14 +7,14 @@
     <link rel="icon" type="image/png" sizes="128x128" href="img/lula.png">
  <meta property="og:title" content="Fiverr PvP Coach">
 <meta property="og:description" content="Fiverr Website">
-<meta property="og:image" content="https://cdn.discordapp.com/attachments/971085272383094864/1150382333980057600/fatniggert.png"> <!-- Bild-URL deiner Webseite -->
+<meta property="og:image" content="https://cdn.discordapp.com/attachments/971085272383094864/1150382333980057600/fatniggert.png">
 <meta property="og:url" content="https://lulamc.github.io/fiverr/">
     <style>
-        /* CSS für die allgemeine Seite */
+        
         body {
             margin: 0;
             padding: 0;
-            background-image: url('https://cdn.discordapp.com/attachments/971085272383094864/1150830130768400425/2023-05-07_12.png'); /* Hintergrundbild-Link hier einfügen */
+            background-image: url('https://cdn.discordapp.com/attachments/971085272383094864/1150830130768400425/2023-05-07_12.png');
             background-size: cover;
             font-family: Arial, sans-serif;
         }
@@ -28,20 +28,20 @@
             padding: 20px;
         }
 
-        /* CSS für die Spalten */
+        
         .spalte {
             flex: 1;
             text-align: center;
-            background-color: rgba(255, 255, 255, 0.8); /* Hintergrundfarbe für die Spalten */
+            background-color: rgba(255, 255, 255, 0.8);
             padding: 10px;
             border-radius: 9px;
             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
-            transition: transform 3s ease; /* Animationseffekt: Verschiebung nach oben */
+            transition: transform 3s ease;
         }
 
         /* CSS für den Animationseffekt beim Laden der Seite */
         .spalte.animate {
-            transform: translateY(-50px); /* Verschiebung nach oben um 50px */
+            transform: translateY(-50px);
         }
     </style>
 </head>
@@ -77,14 +77,13 @@
         </div>
     </div>
 
-    <script>
-        // JavaScript für den Animationseffekt beim Laden der Seite
+    <script>
         const spalten = document.querySelectorAll('.spalte');
         window.addEventListener('load', () => {
             spalten.forEach((spalte, index) => {
                 setTimeout(() => {
                     spalte.classList.remove('animate');
-                }, index * 500); // Verzögerung für jede Spalte
+                }, index * 500);
             });
         });
     </script>
