@@ -16,7 +16,7 @@
             font-family: Arial, sans-serif;
             overflow: hidden;
             display: flex;
-            justify-content: center;
+            justify-content: center; /* Horizontal zentrieren */
             align-items: flex-end; /* Am unteren Rand ausrichten */
             height: 100vh;
         }
@@ -37,6 +37,14 @@
             object-fit: cover;
             width: 100%;
             height: 100%;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-around; /* Hier haben wir space-around für den Abstand zwischen den Spalten */
+            align-items: center;
+            height: 100vh;
+            padding: 20px;
         }
 
         .spalte {
@@ -68,60 +76,60 @@
     </style>
 </head>
 <body>
-    <div class="info-text">
-        Click anywhere to go to Fiverr
+<div class="info-text">
+    Click anywhere to go to Fiverr
+</div>
+<div id="video-container">
+    <video autoplay loop muted>
+        <source src="video.mp4" type="video/mp4">
+        <!-- Weitere Videoformate hier hinzufügen (z. B. WebM, Ogg) -->
+    </video>
+</div>
+<div class="container">
+    <div class="spalte animate">
+        <h1>Basic</h1>
+        <p><strong>Basic PvP knowledge</strong></p>
+        <p>We will grant you the basic understanding of PvP</p>
+        <i>Version:1.8.9, 1.16+</i>
+        <p><em>ca.45min</em></p>
     </div>
-    <div id="video-container">
-        <video autoplay loop muted>
-            <source src="video.mp4" type="video/mp4">
-            <!-- Weitere Videoformate hier hinzufügen (z. B. WebM, Ogg) -->
-        </video>
+    <div class="spalte animate">
+        <h1>Standard</h1>
+        <p><strong>Above average PvP knowledge</strong></p>
+        <p>Good understanding of the PvP knowledge</p>
+        <i>Version: 1.7.10, 1.8.9, 1.16+</i>
+        <p><em>ca.60min</em></p>
     </div>
-    <div class="container">
-        <div class="spalte animate">
-            <h1>Basic</h1>
-            <p><strong>Basic PvP knowledge</strong></p>
-            <p>We will grant you the basic understanding of PvP</p>
-            <i>Version:1.8.9, 1.16+</i>
-            <p><em>ca.45min</em></p>
-        </div>
-        <div class="spalte animate">
-            <h1>Standard</h1>
-            <p><strong>Above average PvP knowledge</strong></p>
-            <p>Good understanding of the PvP knowledge</p>
-            <i>Version: 1.7.10, 1.8.9, 1.16+</i>
-            <p><em>ca.60min</em></p>
-        </div>
-        <div class="spalte animate">
-            <h1>Premium</h1>
-            <p><strong>We will teach everything we know</strong></p>          
-            <p>We will teach:</p>
-            <p>W-Taps</p>
-            <p>S-Taps</p>
-            <p>Speedbridge</p>
-            <p>Using the Scoreboard</p>
-            <p>Reducing kb</p>
-            <p>CPS</p>
-            <p>Technical</p>
-            <p>Client selection</p>
-            <i>Version: 1.7.10, 1.8.9, 1.16+</i>
-            <p><em>ca.2h+</em></p>
-        </div>
+    <div class="spalte animate">
+        <h1>Premium</h1>
+        <p><strong>We will teach everything we know</strong></p>
+        <p>We will teach:</p>
+        <p>W-Taps</p>
+        <p>S-Taps</p>
+        <p>Speedbridge</p>
+        <p>Using the Scoreboard</p>
+        <p>Reducing kb</p>
+        <p>CPS</p>
+        <p>Technical</p>
+        <p>Client selection</p>
+        <i>Version: 1.7.10, 1.8.9, 1.16+</i>
+        <p><em>ca.2h+</em></p>
     </div>
+</div>
 
-    <script>
-        document.body.addEventListener('click', function() {
-            window.location.href = 'https://www.youtube.com/watch?v=xvFZjo5PgG0&pp=ygUUcmlja3JvbGwgd2l0aG91dCBhZHM%3D';
-        });
+<script>
+    document.body.addEventListener('click', function() {
+        window.location.href = 'https://www.youtube.com/watch?v=xvFZjo5PgG0&pp=ygUUcmlja3JvbGwgd2l0aG91dCBhZHM%3D';
+    });
 
-        const spalten = document.querySelectorAll('.spalte');
-        window.addEventListener('load', () => {
-            spalten.forEach((spalte, index) => {
-                setTimeout(() => {
-                    spalte.classList.remove('animate');
-                }, index * 500);
-            });
+    const spalten = document.querySelectorAll('.spalte');
+    window.addEventListener('load', () => {
+        spalten.forEach((spalte, index) => {
+            setTimeout(() => {
+                spalte.classList.remove('animate');
+            }, index * 500);
         });
-    </script>
+    });
+</script>
 </body>
 </html>
