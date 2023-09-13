@@ -5,35 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fiverr PvP Coach</title>
     <link rel="icon" type="image/png" sizes="128x128" href="img/lula.png">
- <meta property="og:title" content="Fiverr PvP Coach">
-<meta property="og:description" content="Fiverr Website">
-<meta property="og:image" content="https://cdn.discordapp.com/attachments/971085272383094864/1150382333980057600/fatniggert.png">
-<meta property="og:url" content="https://lulamc.github.io/fiverr/">
+    <meta property="og:title" content="Fiverr PvP Coach">
+    <meta property="og:description" content="Fiverr Website">
+    <meta property="og:image" content="https://cdn.discordapp.com/attachments/971085272383094864/1150382333980057600/fatniggert.png">
+    <meta property="og:url" content="https://lulamc.github.io/fiverr/">
     <style>
-           
-        
         body {
             margin: 0;
             padding: 0;
-            background-image: url('https://cdn.discordapp.com/attachments/971085272383094864/1150830130768400425/2023-05-07_12.png');
-            background-size: cover;
             font-family: Arial, sans-serif;
             overflow: hidden;
             display: flex;
-            justify-content: center; /* Horizontal zentrieren */
-            align-items: center; /* Am unteren Rand ausrichten */
+            justify-content: center;
+            align-items: flex-end; /* Am unteren Rand ausrichten */
             height: 100vh;
         }
 
-        /* CSS für die Container */
-        .container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            height: 100vh;
-            padding: 20px;
-        }
-
+        /* Stil für das Video-Container */
         #video-container {
             position: fixed;
             top: 0;
@@ -43,11 +31,14 @@
             z-index: -1; /* Hinter den Inhalten */
             overflow: hidden;
         }
-video {
+
+        /* Stil für das Video */
+        video {
             object-fit: cover;
             width: 100%;
             height: 100%;
         }
+
         .spalte {
             flex: 1;
             text-align: center;
@@ -63,7 +54,8 @@ video {
         .spalte.animate {
             transform: translateY(-80px);
         }
-.info-text {
+
+        .info-text {
             position: absolute;
             top: 20px;
             left: 50%;
@@ -73,18 +65,18 @@ video {
             padding: 5px 10px;
             border-radius: 5px;
         }
- 
     </style>
 </head>
 <body>
-<div class="info-text">
+    <div class="info-text">
         Click anywhere to go to Fiverr
     </div>
-<div id="video-container">
+    <div id="video-container">
         <video autoplay loop muted>
             <source src="video.mp4" type="video/mp4">
             <!-- Weitere Videoformate hier hinzufügen (z. B. WebM, Ogg) -->
         </video>
+    </div>
     <div class="container">
         <div class="spalte animate">
             <h1>Basic</h1>
@@ -102,25 +94,24 @@ video {
         </div>
         <div class="spalte animate">
             <h1>Premium</h1>
-            <p><strong>We will teach everything we know</strong></p>          <p>We will teach:</p>
+            <p><strong>We will teach everything we know</strong></p>          
+            <p>We will teach:</p>
             <p>W-Taps</p>
             <p>S-Taps</p>
             <p>Speedbridge</p>
             <p>Using the Scoreboard</p>
-            <p>Reducing, kb</p>
+            <p>Reducing kb</p>
             <p>CPS</p>
             <p>Technical</p>
-<p>Client selection</p>
-<i>Version: 1.7.10, 1.8.9, 1.16+</i>
+            <p>Client selection</p>
+            <i>Version: 1.7.10, 1.8.9, 1.16+</i>
             <p><em>ca.2h+</em></p>
         </div>
     </div>
 
-
-
     <script>
-                document.body.addEventListener('click', function() {
-            window.location.href = 'https://www.youtube.com/watch?v=xvFZjo5PgG0&pp=ygUUcmlja3JvbGwgd2l0aG91dCBhZHM%3D'; // Ändere 'Ziel-Seite.html' zur gewünschten Zielseite
+        document.body.addEventListener('click', function() {
+            window.location.href = 'https://www.youtube.com/watch?v=xvFZjo5PgG0&pp=ygUUcmlja3JvbGwgd2l0aG91dCBhZHM%3D';
         });
 
         const spalten = document.querySelectorAll('.spalte');
