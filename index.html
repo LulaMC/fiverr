@@ -41,10 +41,12 @@
 
         .container {
             display: flex;
+            flex-direction: column; /* Spalten untereinander anordnen */
             justify-content: space-around; /* Hier haben wir space-around für den Abstand zwischen den Spalten */
             align-items: center;
-            height: 100vh;
+            height: 80vh; /* Höhe auf 80% der Bildschirmhöhe reduziert */
             padding: 20px;
+            background-color: rgba(0, 0, 0, 0.5); /* Hintergrundfarbe hinzugefügt */
         }
 
         .spalte {
@@ -72,6 +74,13 @@
             color: white;
             padding: 5px 10px;
             border-radius: 5px;
+        }
+
+        /* Stil für den Copyright-Text */
+        .copyright-text {
+            color: rgba(255, 255, 255, 0.8);
+            text-align: center;
+            margin-top: 10px; /* Abstand nach oben hinzugefügt */
         }
     </style>
 </head>
@@ -114,6 +123,9 @@
         <p>Client selection</p>
         <i>Version: 1.7.10, 1.8.9, 1.16+</i>
         <p><em>ca.2h+</em></p>
+    </div>
+    <div class="copyright-text">
+        &copy; Lula 2023
     </div>
 </div>
 
